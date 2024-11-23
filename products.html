@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Productos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #00b0ff, #004cb3); /* Degradado de azul */
+      font-family: Arial, sans-serif;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+    .product-card img {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product-card-body {
+      padding: 20px;
+    }
+    .product-card h5 {
+      color: #004cb3; /* Azul para el título del producto */
+    }
+    .btn-buy {
+      background-color: #004cb3; /* Azul para el botón */
+      color: white;
+      border: none;
+    }
+    .btn-buy:hover {
+      background-color: #003084; /* Azul más oscuro para hover */
+      color: white; /* Mantener el color de la letra blanco */
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="text-center text-white mb-4">Nuestros Productos</h2>
+
+    <div class="row">
+      <!-- Producto 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/500x300/007bff/ffffff?text=Producto+1" alt="Producto 1">
+          <div class="card-body product-card-body">
+            <h5 class="card-title">Producto 1</h5>
+            <p class="card-text">Descripción breve del producto. Este producto es ideal para todo tipo de usuarios que buscan calidad y diseño.</p>
+            <button class="btn btn-buy btn-block">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/500x300/007bff/ffffff?text=Producto+2" alt="Producto 2">
+          <div class="card-body product-card-body">
+            <h5 class="card-title">Producto 2</h5>
+            <p class="card-text">Este producto ofrece una gran funcionalidad y diseño a un precio accesible. ¡No te lo pierdas!</p>
+            <button class="btn btn-buy btn-block">Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="https://via.placeholder.com/500x300/007bff/ffffff?text=Producto+3" alt="Producto 3">
+          <div class="card-body product-card-body">
+            <h5 class="card-title">Producto 3</h5>
+            <p class="card-text">Producto premium con características excepcionales. Ideal para quienes buscan lo mejor.</p>
+            <button class="btn btn-buy btn-block">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
