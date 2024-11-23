@@ -1,0 +1,34 @@
+name: CI Workflow
+
+# Este flujo de trabajo se activa en los siguientes eventos:
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+# Definir los trabajos que se realizarán
+jobs:
+  build:
+    runs-on: ubuntu-latest # Utiliza una máquina virtual Ubuntu para ejecutar las acciones
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Este paso obtiene el código de tu repositorio
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Establece la versión de Node.js que deseas usar
+    
+    - name: Install dependencies
+      run: |
+        npm install  # Instala las dependencias necesarias para tu proyecto
+    
+    - name: Run tests
+      run: |
+        npm test  # Ejecuta las pruebas definidas en tu proyecto
